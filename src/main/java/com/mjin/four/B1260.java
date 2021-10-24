@@ -29,13 +29,17 @@ public class B1260 {
                 graph.addEdge(secondNodeNumber, firstNodeNumber);
             }
 
-            System.out.println(graph.getDfsPath(V) + "\n" + graph.getBfsPath(V));
+            bw.write(graph.getDfsPath(V) + "\n" + graph.getBfsPath(V));
         }
     }
 
     static class Graph {
 
         private final Map<Integer, List<Integer>> edgesMapByNodeNumber;
+
+        // 1 - 2, 3
+        // 2 - 1
+        // 3 - 1
 
         public Graph() {
             edgesMapByNodeNumber = new HashMap<>();
